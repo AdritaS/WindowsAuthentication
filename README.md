@@ -25,4 +25,14 @@ _API_:
  
  ```
 
-Windows Authentication and AUthorization is enable, but if we want to call the APIs via ajax request- Angular or jQuery
+Windows Authentication and AUthorization is enabled, but if we want to call the APIs via ajax request- Angular or jQuery,
+
+**1.We need to enable CORS**
+
+Install Microsoft.AspNet.WebApi.Cors from Nuget Package manager and in WebApi.Config.cs, add the following line
+
+```
+config.EnableCors();
+```
+
+**2. We also need to Pass credentials in cross-origin requests from UI**
