@@ -16,8 +16,13 @@ _API_:
 
 2. In Web.Config, add the following lines:
 
-     <authentication mode="Windows" />
-      <authorization>
-        <allow users="DESKTOP-NJOPU8B\Adrita" />
-        <deny users="*" />
-      </authorization>
+ ```
+   <authentication mode="Windows" />
+   <authorization>
+      <allow users="DESKTOP-NJOPU8B\Adrita" />
+      <deny users="*" />
+   </authorization></xml>
+ 
+ ```
+
+Windows Authentication and AUthorization is enable, but if we want to call the APIs via ajax request- Angular or jQuery
