@@ -36,3 +36,17 @@ config.EnableCors();
 ```
 
 **2. We also need to Pass credentials in cross-origin requests from UI**
+
+To support credential in Controller Level, add the following line
+
+```
+[EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*", SupportsCredentials = true)]
+```
+
+** To send credential from UI**
+
+```
+this.http.get('http://localhost:51285/api/auth', { withCredentials: true }).subscribe((resp: any) => {
+      console.log(resp)
+});
+```
